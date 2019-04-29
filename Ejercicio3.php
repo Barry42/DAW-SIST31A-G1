@@ -42,18 +42,18 @@ article{
 	border:3px solid red;
 }
 article:hover{
-	background-color: skyblue;
+	background-color: yellow;
 }
 </style>
 <body><br><br><br>
 
 	<?php 
 	$n=" ";
-if (isset($_POST["enviar"]) && !empty($_POST["enviar"])){
-	$n=$_POST["alumnos"];
+if (isset($_POST["ok"]) && !empty($_POST["ok"])){
+	$n=$_POST["maestross"];
 	$i=1;
 	if ($n>0) {
-		echo "<form method=post>";
+		echo "<form method=get>";
 		while ($i<=$n) {
 			echo "Nombre del estudiante $i:&nbsp;<input type=text name=nombre[] validated>&nbsp;&nbsp;";
 			echo "Nota de la materia:&nbsp;<input type=number name=nota[] validated><br><br>";
